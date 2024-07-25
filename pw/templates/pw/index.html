@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Product List</title>
+</head>
+
+<body>
+<h1 style="background-color:aquamarine; text-align: center"> Models and Template in Django</h1>
+
+<div>
+    {% for product in products %}
+        Title : <a href="{% url 'product_detail' product.id %}">{{ product.title }}</a> <br>
+        Brand : {{ product.brand }}<br>
+
+        <hr>
+    {% endfor %}
+</div>
+</body>
+
+</html>
